@@ -13,7 +13,9 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     provider_ignores_state: Rails.env.development?
   }
 
-  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']
+  provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET'],{
+    scope: "user"
+  }
 
   provider :line, ENV['LINE_CHANNNEL_ID'], ENV['LINE_CHANNEL_SECRET'],{
     provider_ignores_state: Rails.env.development?
