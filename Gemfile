@@ -48,7 +48,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-discord'
 
 # GitHub
-gem 'omniauth-github', '~> 2.0.0'
+gem 'omniauth-github', '~> 2.0.1'
 
 # Line
 gem 'omniauth-line'
