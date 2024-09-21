@@ -82,3 +82,36 @@ GOOGLE_CLIENT_SECRET=ABCDE-Efhi01234
 ※`=`の後に空白を入れたり`"`で文字列を囲ったりする必要はないです。
 
 上記で設定した後、必要に応じて`docker compose up`し直すと行けるハズ
+
+## Discord認証
+`https://discord.com/developers/applications`へアクセス\
+※ログインしたあとは入れます
+
+右上の「New Application」をクリック
+<img src="https://i.gyazo.com/292f68e2e2694e7105c7105665cf6547.png" width="400px" />
+
+ポップアップが出るのでアプリ名を入れる（ユーザーの認証でも表示されるもの）\
+チェックボックスにチェックを入れて「Create」
+
+左カラムから「OAuth2」を選択
+<img src="https://i.gyazo.com/07c201a9d380706048e56e80056618c3.png" width="400px" />
+
+**Client information**の「CLIENT SECRET」で「Reset Secret」をクリック\
+確認が入るけれど「Yes, do it!」でOK\
+**CLIENT ID**と**CLIENT SECRET**を環境変数にセット
+<img src="https://i.gyazo.com/b7771afefb7f96cd13fb9e83590d516b.png" width="400px" />
+```
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=
+例：
+DISCORD_CLIENT_ID=123456789
+DISCORD_CLIENT_SECRET=abcDEfga123
+```
+※`=`の後に空白を入れたり`"`で文字列を囲ったりする必要はないです。\
+上記で設定した後、必要に応じて`docker compose up`し直すと行けるハズ
+
+**Redirects**の「Add Redirect」をクリック
+<img src="https://i.gyazo.com/921592ca36183ecd137626b1c1bf5791.png" width="400px" />
+`http://localhost:3000/auth/discord/callback`を入力する。\
+フォーカスが変わると下に「Save」ボタン出るのでSave
+<img src="https://i.gyazo.com/c866050f499ea07cc34d2bcee3a86ddc.png" eidth="400px" />
