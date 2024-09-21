@@ -46,11 +46,14 @@ LINE_CHANNEL_SECRET=
 <img src="https://i.gyazo.com/51a79d23916e3fceab6cc10cd3e8f35f.png" width="400px" />
 
 ### OAuth同意画面
-左カラムから「OAuth同意画面」を選択。\
+左カラムから「OAuth同意画面」を選択。
+
 「User Type」を「外部」にして作成
+
 <img src="https://i.gyazo.com/ad6db7cfb299fb26dc724b0c38e1be49.png" width="400px" />
 
-「アプリ名」「ユーザーサポートメール」「デベロッパーの連絡先情報」を記入して「保存して次へ」\
+「アプリ名」「ユーザーサポートメール」「デベロッパーの連絡先情報」を記入して「保存して次へ」
+
 他の項目はあとから設定可能
 
 
@@ -61,17 +64,25 @@ LINE_CHANNEL_SECRET=
 概要で確認して「ダッシュボードに戻る」
 
 ### 認証情報
-左カラムから「認証情報」を選択。\
+左カラムから「認証情報」を選択。
+
 上の「認証情報を作成」から「OAuthクライアントID」を選択
+
 <img src="https://i.gyazo.com/8494c8793a4bcf206fe26ecfee88c8aa.png" width="400px" />
 
-アプリケーションの種類は「ウェブ アプリケーション」を選択\
-名前は開発者側の識別用なので何でもOK\
-**承認済みのJavaScript生成元**で「URIを追加」を押し`http://localhost:3000`を記入\
-**承認済みのリダイレクトURI**で「URIを追加」を押し`http://localhost:3000/auth/google_oauth2/callback`を記入\
-上記記入できたら「作成」\
+アプリケーションの種類は「ウェブ アプリケーション」を選択
+
+名前は開発者側の識別用なので何でもOK
+
+**承認済みのJavaScript生成元**で「URIを追加」を押し`http://localhost:3000`を記入
+
+**承認済みのリダイレクトURI**で「URIを追加」を押し`http://localhost:3000/auth/google_oauth2/callback`を記入
+
+上記記入できたら「作成」
+
 
 **OAuthクライアントを作成しました**というポップアップが出たら、「クライアントID」と「クライアントシークレット」が表示されるので、それぞれ`.env`の環境変数にセット
+
 ```
 GOOGLE_CLIENT_ID=クライアントID
 GOOGLE_CLIENT_SECRET=クライアントシークレット
@@ -79,6 +90,7 @@ GOOGLE_CLIENT_SECRET=クライアントシークレット
 GOOGLE_CLIENT_ID=012345-abcdefg.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=ABCDE-Efhi01234
 ```
+
 ※`=`の後に空白を入れたり`"`で文字列を囲ったりする必要はないです。
 
 上記で設定した後、必要に応じて`docker compose up`し直すと行けるハズ
