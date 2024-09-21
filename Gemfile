@@ -38,12 +38,6 @@ gem "omniauth-rails_csrf_protection"
 # Google OAuth2
 gem 'omniauth-google-oauth2'
 
-# Twitter
-gem 'omniauth-twitter'
-
-# Facebook
-gem 'omniauth-facebook'
-
 # Discord
 gem 'omniauth-discord'
 
@@ -52,11 +46,4 @@ gem 'omniauth-github', '~> 2.0.0'
 
 # Line
 gem 'omniauth-line'
-
-# Apple
-gem 'omniauth-apple'
-
-# Yahoo
-gem 'omniauth-yahoojp'
-
 
