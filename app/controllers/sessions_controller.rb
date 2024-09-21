@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
     begin
       provider = request.env['omniauth.auth'].provider
       auth = request.env['omniauth.auth']
-      Rails.logger.info("auth: #{auth}")
       user = User.find_by(email: auth.info.email)
 
       if user.nil?
@@ -26,6 +25,7 @@ class SessionsController < ApplicationController
       end
 
       session[:user_id] = user.id
+      flash[:success] = 'ログインに成功しました'
       redirect_to users_path
     rescue => e
       flash[:error] = e.message
