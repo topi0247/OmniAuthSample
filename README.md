@@ -29,20 +29,27 @@ LINE_CHANNEL_SECRET=
 `https://console.cloud.google.com/`にアクセス
 
 リダイレクトして下記の画面になったらOK
+
 <img src="https://i.gyazo.com/c8bedfdde6abc30129b03b26220314a6.png" width="400px" />
+
 「APIとサービス」を選択
 
 ヘッダーからプロジェクトを選択（赤い丸、新規作成の場合は画面違うかも）
+
 <img src="https://i.gyazo.com/d9239dd85a7a720d7f8583b13c7ff783.png" width="400px" />
 
 ポップアップの右上「新しいプロジェクト」をクリック
+
 <img src="https://i.gyazo.com/5edc1acf8a3c48f693e70757762d8513.png" width="400px" />
 
 「プロジェクト名」を記入して「作成」ボタン（「場所」は「組織なし」でも大丈夫）
+
 <img src="https://i.gyazo.com/64287849f1c204881a8969c48171ebaa.png" width="400px" />
 
-右上通知欄で作成が完了したら「プロジェクトを選択」で作成したプロジェクトに移動 \
+右上通知欄で作成が完了したら「プロジェクトを選択」で作成したプロジェクトに移動
+
 あるいはヘッダーからプロジェクトを選択してもOK
+
 <img src="https://i.gyazo.com/51a79d23916e3fceab6cc10cd3e8f35f.png" width="400px" />
 
 ### OAuth同意画面
