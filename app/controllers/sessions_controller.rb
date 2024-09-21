@@ -7,10 +7,14 @@ class SessionsController < ApplicationController
     begin
       provider = request.env['omniauth.auth'].provider
       auth = request.env['omniauth.auth']
+      Rails.logger.info("auth: #{auth}")
       user = User.find_by(email: auth.info.email)
 
       if user.nil?
-        user = User.create!(email: auth.info.email)
+        user = User.create!
+        if auth.info.has_key?(:email)
+          user.update!(email: auth.info.email)
+        end
       end
 
 

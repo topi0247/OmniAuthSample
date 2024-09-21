@@ -5,8 +5,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     image_aspect_ratio: 'square'
   }
 
-  provider :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET']
-
   provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
 
   provider :discord, ENV['DISCORD_CLIENT_ID'], ENV['DISCORD_CLIENT_SECRET'], scope: 'email identify'
