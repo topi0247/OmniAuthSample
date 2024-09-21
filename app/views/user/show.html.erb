@@ -1,0 +1,34 @@
+<h1 class="text-3xl font-bold mb-4 text-center">User Profile</h1>
+
+<h2 class="text-xl font-semibold mb-4">Authentications</h2>
+
+<div class="grid grid-cols-1 gap-4 max-w-lg mx-auto">
+  <% current_user.authentications.each do |auth| %>
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <div class="flex items-center mb-4">
+          <div class="avatar mr-4">
+            <div class="w-16 rounded-full">
+              <%= image_tag(auth.image) if auth.image.present? %>
+            </div>
+          </div>
+          <div>
+            <span class="text-lg font-bold">
+              <%= auth.name || "Unknown" %>
+            </span>
+            <div class="badge badge-outline ml-2">
+              <%= auth.provider.capitalize %>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <strong>UID:</strong> <%= auth.uid %>
+        </p>
+        <p>
+          <strong>Created At:</strong> <%= auth.created_at.strftime("%Y-%m-%d %H:%M") %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

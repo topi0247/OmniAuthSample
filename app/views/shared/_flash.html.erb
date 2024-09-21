@@ -1,0 +1,8 @@
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= flash_class_for(key) %> shadow-lg max-w-md mx-auto mt-4">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M12 12h.01M12 12h.01M12 12h.01M12 12h.01M12 12h.01"/></svg>
+      <span><%= value %></span>
+    </div>
+  </div>
+<% end %>

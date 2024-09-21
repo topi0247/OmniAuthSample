@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Myapp" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+<body class="bg-base-200 flex flex-col min-h-screen">
+  <header class="navbar bg-primary text-primary-content">
+    <div class="flex-1">
+      <a href="/" class="text-xl font-bold px-4">多重ログインアプリ</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><%= link_to 'ログイン', root_path, class: 'btn btn-ghost' %></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="grow">
+    <%= render 'shared/flash' %>
+    <div class="container mx-auto mt-10">
+      <%= yield %>
+    </div>
+  </div>
+
+  <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-10">
+    <div>
+      <p>© <%= Date.today.year %> とぴ</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<h1 class='text-2xl font-bold mb-4 text-center'>ログイン</h1>
+
+<div class='grid grid-cols-3 gap-4 max-w-md mx-auto'>
+  <%= link_to 'Google', '/auth/google_oauth2', class: 'btn btn-outline btn-primary w-full', data: { turbo: false } %>
+
+  <%= link_to 'Twitter', '/auth/twitter',  class: 'btn btn-outline btn-info w-full', data: { turbo: false } %>
+
+  <%= link_to 'Facebook', '/auth/facebook', class: 'btn btn-outline btn-blue-600 w-full', data: { turbo: false } %>
+
+  <%= link_to 'Discord', '/auth/discord', class: 'btn btn-outline btn-dark w-full', data: { turbo: false } %>
+
+  <%= link_to 'GitHub', '/auth/github', class: 'btn btn-outline btn-black w-full', data: { turbo: false } %>
+
+  <%= link_to 'LINE', '/auth/line', class: 'btn btn-outline btn-success w-full', data: { turbo: false } %>
+
+  <%= link_to 'Apple', '/auth/apple',  class: 'btn btn-outline btn-gray-800 w-full', data: { turbo: false } %>
+
+  <%= link_to 'YahooJP' ,'/auth/yahoojp',  class: 'btn btn-outline btn-purple-500 w-full', data: { turbo: false } %>
+</div>
